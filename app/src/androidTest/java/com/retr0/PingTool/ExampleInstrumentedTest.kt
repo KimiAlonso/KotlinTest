@@ -1,4 +1,4 @@
-package com.retr0.kotlindemo
+package com.retr0.PingTool
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

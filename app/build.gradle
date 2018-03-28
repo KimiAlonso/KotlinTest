@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.retr0.kotlindemo"
+        applicationId "com.retr0.PingTool"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1

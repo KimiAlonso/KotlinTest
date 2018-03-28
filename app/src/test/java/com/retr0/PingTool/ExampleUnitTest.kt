@@ -1,4 +1,4 @@
-package com.retr0.kotlindemo
+package com.retr0.PingTool
 
 import org.junit.Test
 
