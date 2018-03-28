@@ -1,22 +1,16 @@
 package com.retr0.PingTool
 
-import android.os.AsyncTask
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import com.retr0.PingTool.R
 import io.reactivex.*
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.rxkotlin.toObservable
 import kotlinx.android.synthetic.main.activity_main.*
-import org.reactivestreams.Subscriber
 import java.io.BufferedReader
 import java.io.InputStream
-import java.io.InputStreamReader
-import java.io.LineNumberReader
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
