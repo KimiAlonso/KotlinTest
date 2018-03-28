@@ -20,31 +20,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     val address = "8.8.8.8"
 
     override fun onClick(v: View) {
-
         when (v) {
             bt_test -> {
                 Toast.makeText(this,"onclick",Toast.LENGTH_SHORT).show()
-
                 Thread({
-
-                    var process : Process = Runtime.getRuntime().exec("ping "+address)
-                    var imput : InputStream = process.inputStream
-                    var r : InputStreamReader = imput.reader()
-                    var bufferReader : BufferedReader = imput.bufferedReader()
+                    val process : Process = Runtime.getRuntime().exec("ping "+address)
+                    val imput : InputStream = process.inputStream
+                    val bufferReader : BufferedReader = imput.bufferedReader()
                     var msg : String= bufferReader.readLine()
                     while ( msg != null){
                         Log.e("ping",msg)
                         msg = bufferReader.readLine()
                     }
-
-                    
                 }).start()
-
-
-
             }
             else -> {
-
             }
         }
     }
