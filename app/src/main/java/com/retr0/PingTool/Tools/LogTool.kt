@@ -14,5 +14,10 @@ class LogTool {
                 Log.e(Tag,Msg)
             }
         }
+        fun logE (Tag : String , Msg : Int){
+            if (isOpen) {
+                Log.e(Tag,Msg.toString())
+            }
+        }
     }
 }
