@@ -25,10 +25,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     val s: Int = 1
     var address = "www.baidu.com"
     var pingMsg = " "
+    var colorCode = " "
 
     override fun onClick(v: View) {
         when (v) {
             bt_test -> {
+                colorCode = tv_address.text.toString()
+//                iv_color.setBackgroundColor(Integer.parseInt(colorCode))
+
+
+                LogTool.logE("color",colorCode)
 //                Toast.makeText(this, "onclick", Toast.LENGTH_SHORT).show()
 //                Thread({
 //                    val process: Process = Runtime.getRuntime().exec("ping " + address)
@@ -41,8 +47,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 //                    }
 //                }).start()
 
-                val intent = Intent(this,ScanActivity::class.java)
-                startActivity(intent)
+//                val intent = Intent(this,ScanActivity::class.java)
+//                startActivity(intent)
 
 
             }
@@ -65,8 +71,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
             override fun onNext(item: Any) {
                 println("Next $item")
+                LogTool.logE("onNext","go")
                 LogTool.logE("onNext", pingMsg)
                 Toast.makeText(this@MainActivity, pingMsg, Toast.LENGTH_SHORT).show()
+                tv_pingMsg.setText(pingMsg)
+
             }
 
             override fun onError(e: Throwable) {

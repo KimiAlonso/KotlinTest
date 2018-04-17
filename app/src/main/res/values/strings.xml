@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">PingTool</string>
-    <string name="mainActivity_bt1">扫码</string>
+    <string name="mainActivity_bt1">setColor</string>
 </resources>
